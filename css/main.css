@@ -8,8 +8,21 @@
 /* цвет фона футера #2F303A */
 
 /* Hero */
-.hero-section {
-  background-color: #2f303a;
+.hero-overlay {
+  max-width: 1600px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--hero-bg-color);
+  background-image: linear-gradient(
+      to right,
+      var(--hero-gradient),
+      var(--hero-gradient)
+    ),
+    url("../images/hero.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 .hero {
   padding-top: 200px;
@@ -61,11 +74,34 @@
 }
 
 .features .item {
-  display: inline-block;
+  display: block;
   width: calc((100%-30 * 3) / 4);
 }
 .features .item:not(:last-child) {
   margin-right: 30px;
+}
+/* Оставила оформление через :before для примера. Преподаватель на вебинаре разрешил */
+.features .item::before {
+  display: block;
+  content: "";
+  height: 120px;
+  border-radius: 4px;
+  background-color: #f5f4fa;
+  background-size: 70px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.icon-antenna::before {
+  background-image: url(../images/antenna.svg);
+}
+.icon-clock::before {
+  background-image: url(../images/clock.svg);
+}
+.icon-diagram::before {
+  background-image: url(../images/diagram.svg);
+}
+.icon-astronaut::before {
+  background-image: url(../images/astronaut.svg);
 }
 .features .subtitle {
   margin-top: 30px;
@@ -115,7 +151,6 @@
   font-weight: 400;
 }
 .team .title {
-  margin-top: 30px;
   font-weight: 500;
   text-align: center;
   font-size: 16px;
@@ -138,19 +173,49 @@
   margin-top: 50px;
 }
 .worker .item {
-  padding-top: 0;
-  padding-bottom: 30px;
+  padding 0;
   width: calc((100%-30 * 3) / 4);
 }
 .worker .item:not(:last-child) {
   margin-right: 30px;
 }
-.worker .list {
+.worker-content {
+  padding: 30px 32px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0 0 4px 4px;
+}
+.socials {
+  display: flex;
+  justify-content: space-between;
   margin-top: 16px;
 }
+.socials-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  width: 44px;
+  height: 44px;
+  color: #AFB1B8;;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.icon-socials {
+  fill: currentColor;
+}
+.socials-link:hover {
+  background-color: var(--accent-color);
+}
+.socials-link:hover .icon-socials {
+  fill: var(--primary-bg-color);
+}
+.icon-socials:hover {
+  fill: var(--primary-bg-color);
+}
+
 
 /* Clients  Доработаю в 4 дз*/
-/* .clients .container {
+.clients .container {
   padding-top: 94px;
   padding-bottom: 94px;
 }
@@ -163,4 +228,27 @@
 }
 .clients-list .item:not(:last-child) {
   margin-right: 30px;
-} */
+}
+.clients-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  width: 170px;
+  height: 90px;
+  color: var(--clients-link-color);
+  border: 1px solid var(--clients-link-color);
+  border-radius: 4px;
+}
+.icon-clients {
+  fill: currentColor;
+}
+.clients-link:hover {
+  border-color: var(--accent-color);
+}
+.clients-link:hover .icon-clients {
+  fill: var(--accent-color);
+}
+.icon-clients:hover {
+  fill: var(--accent-color);
+}

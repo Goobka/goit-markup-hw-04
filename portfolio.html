@@ -30,16 +30,22 @@
           </ul>
         </nav>
         <address class="address">
-          <ul class="address-list list">
-            <li class="item">
-              <img src="./images/mail.svg" alt="" class="img" />
-              <a href="mailto:info@devstudio.com" class="link"
-                >info@devstudio.com</a
+          <ul class="list">
+            <li class="item address-item">
+              <a href="mailto:info@devstudio.com" class="link address-link">
+                <svg class="icon-address" width="16" height="12">
+                  <use href="./images/sprite.svg#mail"></use>
+                </svg>
+                info@devstudio.com</a
               >
             </li>
-            <li class="item">
-              <img src="./images/tel.svg" alt="" class="img" />
-              <a href="tel:+380961111111" class="link">+38 096 111 11 11</a>
+            <li class="item address-item">
+              <a href="tel:+380961111111" class="link address-link">
+                <svg class="icon-address" width="10" height="16">
+                  <use href="./images/sprite.svg#tel"></use>
+                </svg>
+                +38 096 111 11 11</a
+              >
             </li>
           </ul>
         </address>
@@ -49,7 +55,7 @@
       <!--Портфолио-->
       <section class="portfolio">
         <div class="container">
-          <h1 class="title">Портфолио</h1>
+          <h1 class="title visually-hidden">Портфолио</h1>
           <div class="menu">
             <button type="button" class="button">Все</button>
             <button type="button" class="button">Веб-сайты</button>
@@ -262,35 +268,55 @@
     </main>
     <!-- Футер -->
     <footer class="footer-section">
-      <div class="container footer">
-        <a href="" class="logo">Web<span class="accent">Studio</span></a>
-        <address class="footer-address">
-          <ul class="contacts list">
-            <li class="item post">г. Киев, пр-т Леси Украинки, 26</li>
-            <li class="item">info@example.com</li>
-            <li class="item">+38 099 111 11 11</li>
-          </ul>
-        </address>
-        <!-- <div class="join">
-            <b class="text">присоединяйтесь</b>
+      <div class="container">
+        <div class="footer-flex">
+          <div class="left-part">
+            <a href="" class="logo">Web<span class="accent">Studio</span></a>
+            <address class="footer-address">
+              <ul class="contacts list">
+                <li class="item post">г. Киев, пр-т Леси Украинки, 26</li>
+                <li class="item">info@example.com</li>
+                <li class="item">+38 099 111 11 11</li>
+              </ul>
+            </address>
+          </div>
+          <div class="join">
+            <b class="text">ПРИСОЕДИНЯЙТЕСЬ</b>
             <ul class="list">
               <li>
-                <a href="" aria-label="Instagram link"></a>
+                <a href="" aria-label="Instagram link" class="join-link">
+                  <svg class="icon-join" width="20" height="20">
+                    <use href="./images/sprite.svg#instagram"></use>
+                  </svg>
+                </a>
               </li>
               <li>
-                <a href="" aria-label="Twitter link"></a>
+                <a href="" aria-label="Twitter link" class="join-link">
+                  <svg class="icon-join" width="20" height="20">
+                    <use href="./images/sprite.svg#twitter"></use>
+                  </svg>
+                </a>
               </li>
               <li>
-                <a href="" aria-label="Facebook link"></a>
+                <a href="" aria-label="Facebook link" class="join-link">
+                  <svg class="icon-join" width="20" height="20">
+                    <use href="./images/sprite.svg#facebook"></use>
+                  </svg>
+                </a>
               </li>
               <li>
-                <a href="" aria-label="Linkedin link"></a>
+                <a href="" aria-label="Linkedin link" class="join-link">
+                  <svg class="icon-join" width="20" height="20">
+                    <use href="./images/sprite.svg#linkedin"></use>
+                  </svg>
+                </a>
               </li>
             </ul>
           </div>
-          <div class="join">
+          <div class="signup">
             <b class="text">Подпишитесь на рассылку</b>
-          </div> -->
+          </div>
+        </div>
       </div>
     </footer>
   </body>

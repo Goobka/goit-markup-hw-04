@@ -18,7 +18,7 @@
   </head>
   <body>
     <!-- Шапка сайта -->
-    <header>
+    <header class="header-section">
       <div class="container page-header">
         <nav class="navigation">
           <a href="" class="logo">Web<span class="main">Studio</span></a>
@@ -31,16 +31,22 @@
           </ul>
         </nav>
         <address class="address">
-          <ul class="address-list list">
-            <li class="item">
-              <img src="./images/mail.svg" alt="" class="img" />
-              <a href="mailto:info@devstudio.com" class="link"
-                >info@devstudio.com</a
+          <ul class="list">
+            <li class="item address-item">
+              <a href="mailto:info@devstudio.com" class="link address-link">
+                <svg class="icon-address" width="16" height="12">
+                  <use href="./images/sprite.svg#mail"></use>
+                </svg>
+                info@devstudio.com</a
               >
             </li>
-            <li class="item">
-              <img src="./images/tel.svg" alt="" class="img" />
-              <a href="tel:+380961111111" class="link">+38 096 111 11 11</a>
+            <li class="item address-item">
+              <a href="tel:+380961111111" class="link address-link">
+                <svg class="icon-address" width="10" height="16">
+                  <use href="./images/sprite.svg#tel"></use>
+                </svg>
+                +38 096 111 11 11</a
+              >
             </li>
           </ul>
         </address>
@@ -48,7 +54,7 @@
     </header>
     <main>
       <!-- Герой -->
-      <section class="hero-section">
+      <section class="hero-overlay">
         <div class="container hero">
           <h1 class="title">
             Эффективные решения <br />
@@ -60,34 +66,30 @@
       <!-- Преимущества -->
       <section class="section">
         <div class="container padding-top">
-          <h2 class="title">Наши преимущества</h2>
+          <h2 class="title visually-hidden">Наши преимущества</h2>
           <ul class="features list">
-            <li class="item">
-              <img src="./images/antenna.svg" alt="антенна" class="image" />
+            <li class="item icon-antenna">
               <h3 class="title subtitle">Внимание к деталям</h3>
               <p class="text">
                 Идейные соображения, а также начало повседневной работы по
                 формированию позиции.
               </p>
             </li>
-            <li class="item">
-              <img src="./images/clock.svg" alt="часы" class="image" />
+            <li class="item icon-clock">
               <h3 class="title subtitle">Пунктуальность</h3>
               <p class="text">
                 Задача организации, в особенности же рамки и место обучения
                 кадров влечет за собой.
               </p>
             </li>
-            <li class="item">
-              <img src="./images/diagram.svg" alt="диаграмма" class="image" />
+            <li class="item icon-diagram">
               <h3 class="title subtitle">Планирование</h3>
               <p class="text">
                 Равным образом консультация с широким активом в значительной
                 степени обуславливает.
               </p>
             </li>
-            <li class="item">
-              <img src="./images/astronaut.svg" alt="астронавт" class="image" />
+            <li class="item icon-astronaut">
               <h3 class="title subtitle">Современные технологии</h3>
               <p class="text">
                 Значимость этих проблем настолько очевидна, что реализация
@@ -144,22 +146,56 @@
                 height="260"
                 width="270"
               />
-              <h3 class="title">Игорь Демьяненко</h3>
-              <p class="text">Product Designer</p>
-              <ul class="list">
-                <li>
-                  <a href="" aria-label="Инстаграм ссылка" class="link"></a>
-                </li>
-                <li>
-                  <a href="" aria-label="Твитер ссылка" class="link"></a>
-                </li>
-                <li>
-                  <a href="" aria-label="Фейсбук ссылка" class="link"></a>
-                </li>
-                <li>
-                  <a href="" aria-label="Линкдин ссылка" class="link"></a>
-                </li>
-              </ul>
+              <div class="worker-content">
+                <h3 class="title">Игорь Демьяненко</h3>
+                <p class="text">Product Designer</p>
+                <ul class="list socials">
+                  <li>
+                    <a
+                      href=""
+                      aria-label="Инстаграм ссылка"
+                      class="link socials-link"
+                    >
+                      <svg class="icon-socials" width="20" height="20">
+                        <use href="./images/sprite.svg#instagram"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href=""
+                      aria-label="Твитер ссылка"
+                      class="link socials-link"
+                    >
+                      <svg class="icon-socials" width="20" height="20">
+                        <use href="./images/sprite.svg#twitter"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href=""
+                      aria-label="Фейсбук ссылка"
+                      class="link socials-link"
+                    >
+                      <svg class="icon-socials" width="20" height="20">
+                        <use href="./images/sprite.svg#facebook"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href=""
+                      aria-label="Линкдин ссылка"
+                      class="link socials-link"
+                    >
+                      <svg class="icon-socials" width="20" height="20">
+                        <use href="./images/sprite.svg#linkedin"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </li>
             <li class="item">
               <img
@@ -168,22 +204,56 @@
                 height="260"
                 width="270"
               />
-              <h3 class="title">Ольга Репина</h3>
-              <p class="text">Frontend Developer</p>
-              <ul class="list">
-                <li>
-                  <a href="" aria-label="Инстаграм ссылка" class="link"></a>
-                </li>
-                <li>
-                  <a href="" aria-label="Твитер ссылка" class="link"></a>
-                </li>
-                <li>
-                  <a href="" aria-label="Фейсбук ссылка" class="link"></a>
-                </li>
-                <li>
-                  <a href="" aria-label="Линкдин ссылка" class="link"></a>
-                </li>
-              </ul>
+              <div class="worker-content">
+                <h3 class="title">Ольга Репина</h3>
+                <p class="text">Frontend Developer</p>
+                <ul class="list socials">
+                  <li>
+                    <a
+                      href=""
+                      aria-label="Инстаграм ссылка"
+                      class="link socials-link"
+                    >
+                      <svg class="icon-socials" width="20" height="20">
+                        <use href="./images/sprite.svg#instagram"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href=""
+                      aria-label="Твитер ссылка"
+                      class="link socials-link"
+                    >
+                      <svg class="icon-socials" width="20" height="20">
+                        <use href="./images/sprite.svg#twitter"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href=""
+                      aria-label="Фейсбук ссылка"
+                      class="link socials-link"
+                    >
+                      <svg class="icon-socials" width="20" height="20">
+                        <use href="./images/sprite.svg#facebook"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href=""
+                      aria-label="Линкдин ссылка"
+                      class="link socials-link"
+                    >
+                      <svg class="icon-socials" width="20" height="20">
+                        <use href="./images/sprite.svg#linkedin"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </li>
             <li class="item">
               <img
@@ -192,22 +262,56 @@
                 height="260"
                 width="270"
               />
-              <h3 class="title">Николай Тарасов</h3>
-              <p class="text">Marketing</p>
-              <ul class="list">
-                <li>
-                  <a href="" aria-label="Инстаграм ссылка" class="link"></a>
-                </li>
-                <li>
-                  <a href="" aria-label="Твитер ссылка" class="link"></a>
-                </li>
-                <li>
-                  <a href="" aria-label="Фейсбук ссылка" class="link"></a>
-                </li>
-                <li>
-                  <a href="" aria-label="Линкдин ссылка" class="link"></a>
-                </li>
-              </ul>
+              <div class="worker-content">
+                <h3 class="title">Николай Тарасов</h3>
+                <p class="text">Marketing</p>
+                <ul class="list socials">
+                  <li>
+                    <a
+                      href=""
+                      aria-label="Инстаграм ссылка"
+                      class="link socials-link"
+                    >
+                      <svg class="icon-socials" width="20" height="20">
+                        <use href="./images/sprite.svg#instagram"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href=""
+                      aria-label="Твитер ссылка"
+                      class="link socials-link"
+                    >
+                      <svg class="icon-socials" width="20" height="20">
+                        <use href="./images/sprite.svg#twitter"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href=""
+                      aria-label="Фейсбук ссылка"
+                      class="link socials-link"
+                    >
+                      <svg class="icon-socials" width="20" height="20">
+                        <use href="./images/sprite.svg#facebook"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href=""
+                      aria-label="Линкдин ссылка"
+                      class="link socials-link"
+                    >
+                      <svg class="icon-socials" width="20" height="20">
+                        <use href="./images/sprite.svg#linkedin"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </li>
             <li class="item">
               <img
@@ -216,117 +320,162 @@
                 height="260"
                 width="270"
               />
-              <h3 class="title">Михаил Ермаков</h3>
-              <p class="text">UI Designer</p>
-              <ul class="list">
-                <li>
-                  <a href="" aria-label="Инстаграм ссылка" class="link"></a>
-                </li>
-                <li>
-                  <a href="" aria-label="Твитер ссылка" class="link"></a>
-                </li>
-                <li>
-                  <a href="" aria-label="Фейсбук ссылка" class="link"></a>
-                </li>
-                <li>
-                  <a href="" aria-label="Линкдин ссылка" class="link"></a>
-                </li>
-              </ul>
+              <div class="worker-content">
+                <h3 class="title">Михаил Ермаков</h3>
+                <p class="text">UI Designer</p>
+                <ul class="list socials">
+                  <li>
+                    <a
+                      href=""
+                      aria-label="Инстаграм ссылка"
+                      class="link socials-link"
+                    >
+                      <svg class="icon-socials" width="20" height="20">
+                        <use href="./images/sprite.svg#instagram"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href=""
+                      aria-label="Твитер ссылка"
+                      class="link socials-link"
+                    >
+                      <svg class="icon-socials" width="20" height="20">
+                        <use href="./images/sprite.svg#twitter"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href=""
+                      aria-label="Фейсбук ссылка"
+                      class="link socials-link"
+                    >
+                      <svg class="icon-socials" width="20" height="20">
+                        <use href="./images/sprite.svg#facebook"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href=""
+                      aria-label="Линкдин ссылка"
+                      class="link socials-link"
+                    >
+                      <svg class="icon-socials" width="20" height="20">
+                        <use href="./images/sprite.svg#linkedin"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </li>
           </ul>
         </div>
       </section>
       <!-- Клиенты -->
-      <!-- Или сделать с помощью aria-label как и ссылки на соцсети? 
-       <ul>
-              <li>
-                <a href="" aria-label="Ya & Co"></a>
-              </li>
-              <li>
-                <a href="" aria-label="Company Tagline Here"></a>
-              </li>
-              <li>
-                <a href="" aria-label="Company"></a>
-              </li>
-              <li>
-                <a href="" aria-label="Foster Peters"></a>
-              </li>
-              <li>
-                <a href="" aria-label="Brand"></a>
-              </li>
-              <li>
-                <a href="" aria-label="Company Tag Line"></a>
-              </li>
-            </ul>-->
-      <!-- <section class="section clients">
+      <section class="section clients">
         <div class="container padding-top">
           <h2 class="section-title">Постоянные клиенты</h2>
           <ul class="clients-list list">
             <li class="item">
-              <a href="">
-                <img src="./images/logo1.svg" alt="Логотип компании" />
+              <a href="" class="clients-link">
+                <svg class="icon-clients" width="45" height="50">
+                  <use href="./images/sprite.svg#logo1"></use>
+                </svg>
               </a>
             </li>
             <li class="item">
-              <a href="">
-                <img src="./images/logo2.svg" alt="Логотип компании" />
+              <a href="" class="clients-link">
+                <svg class="icon-clients" width="40" height="52">
+                  <use href="./images/sprite.svg#logo2"></use>
+                </svg>
               </a>
             </li>
             <li class="item">
-              <a href="">
-                <img src="./images/logo3.svg" alt="Логотип компании" />
+              <a href="" class="clients-link">
+                <svg class="icon-clients" width="41" height="43">
+                  <use href="./images/sprite.svg#logo3"></use>
+                </svg>
               </a>
             </li>
             <li class="item">
-              <a href="">
-                <img src="./images/logo4.svg" alt="Логотип компании" />
+              <a href="" class="clients-link">
+                <svg class="icon-clients" width="80" height="42">
+                  <use href="./images/sprite.svg#logo4"></use>
+                </svg>
               </a>
             </li>
             <li class="item">
-              <a href="">
-                <img src="./images/logo5.svg" alt="Логотип компании" />
+              <a href="" class="clients-link">
+                <svg class="icon-clients" width="59" height="47">
+                  <use href="./images/sprite.svg#logo5"></use>
+                </svg>
               </a>
             </li>
             <li class="item">
-              <a href="">
-                <img src="./images/logo6.svg" alt="Логотип компании" />
+              <a href="" class="clients-link">
+                <svg class="icon-clients" width="88" height="45">
+                  <use href="./images/sprite.svg#logo6"></use>
+                </svg>
               </a>
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
     </main>
     <!-- Футер -->
     <footer class="footer-section">
-      <div class="container footer">
-        <a href="" class="logo">Web<span class="accent">Studio</span></a>
-        <address class="footer-address">
-          <ul class="contacts list">
-            <li class="item post">г. Киев, пр-т Леси Украинки, 26</li>
-            <li class="item">info@example.com</li>
-            <li class="item">+38 099 111 11 11</li>
-          </ul>
-        </address>
-        <!-- <div class="join">
-          <b class="text">присоединяйтесь</b>
-          <ul class="list">
-            <li>
-              <a href="" aria-label="Instagram link"></a>
-            </li>
-            <li>
-              <a href="" aria-label="Twitter link"></a>
-            </li>
-            <li>
-              <a href="" aria-label="Facebook link"></a>
-            </li>
-            <li>
-              <a href="" aria-label="Linkedin link"></a>
-            </li>
-          </ul>
+      <div class="container">
+        <div class="footer-flex">
+          <div class="left-part">
+            <a href="" class="logo">Web<span class="accent">Studio</span></a>
+            <address class="footer-address">
+              <ul class="contacts list">
+                <li class="item post">г. Киев, пр-т Леси Украинки, 26</li>
+                <li class="item">info@example.com</li>
+                <li class="item">+38 099 111 11 11</li>
+              </ul>
+            </address>
+          </div>
+          <div class="join">
+            <b class="text">ПРИСОЕДИНЯЙТЕСЬ</b>
+            <ul class="list">
+              <li>
+                <a href="" aria-label="Instagram link" class="join-link">
+                  <svg class="icon-join" width="20" height="20">
+                    <use href="./images/sprite.svg#instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="" aria-label="Twitter link" class="join-link">
+                  <svg class="icon-join" width="20" height="20">
+                    <use href="./images/sprite.svg#twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="" aria-label="Facebook link" class="join-link">
+                  <svg class="icon-join" width="20" height="20">
+                    <use href="./images/sprite.svg#facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="" aria-label="Linkedin link" class="join-link">
+                  <svg class="icon-join" width="20" height="20">
+                    <use href="./images/sprite.svg#linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="signup">
+            <b class="text">Подпишитесь на рассылку</b>
+          </div>
         </div>
-        <div class="join">
-          <b class="text">Подпишитесь на рассылку</b>
-        </div> -->
       </div>
     </footer>
   </body>
